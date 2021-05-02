@@ -73,7 +73,7 @@ public class ChatActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setStackFromEnd(true);
         messageAdapter.setLayoutManager(linearLayoutManager);
-        adapter = new MessagesAdapter(ChatActivity.this, messagesArrayList);
+        adapter = new MessagesAdapter(ChatActivity.this, ReceiverUid, messagesArrayList);
         messageAdapter.setAdapter(adapter);
 
         sendBtn = findViewById(R.id.sendBtn);
@@ -99,6 +99,7 @@ public class ChatActivity extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren())
                 {
                     Messages messages = dataSnapshot.getValue(Messages.class);
+                    messages.setMessageId(snapshot.getKey());
                     messagesArrayList.add(messages);
                 }
                 adapter.notifyDataSetChanged();
