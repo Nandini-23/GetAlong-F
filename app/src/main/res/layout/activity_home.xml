@@ -26,6 +26,16 @@
             android:textColor="@color/white"
             android:textSize="@dimen/_16sdp" />
 
+
+   <!--     <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/search"
+            />
+-->
         <ImageView
             android:id="@+id/img_Setting"
             android:layout_width="@dimen/_20sdp"
@@ -33,6 +43,7 @@
             android:layout_marginRight="@dimen/_10sdp"
             android:layout_gravity="center"
             android:background="@drawable/settings"/>
+
 
 
         <ImageView
